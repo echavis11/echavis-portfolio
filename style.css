@@ -1,0 +1,11 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+#about img {
+    border: 4px solid #0d6efd;
+}
+.card-img-top {
+    height: 200px;           /* Choose a fixed height */
+    object-fit: cover;       /* Crop the image to fit */
+    width: 100%;             /* Ensure full width */
+  }
