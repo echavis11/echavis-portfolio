@@ -40,52 +40,77 @@
       </section>  
 
     <!-- Projects Section -->
-    <section class="container my-5" id="projects">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row">
-        <div class="col-md-4">
-            <div class="card">
+    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- First slide -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card h-100">
                 <img src="images/Pizza.PNG" class="card-img-top" alt="Pizza Screenshot">
                 <div class="card-body">
-                    <h5 class="card-title">Margherita's Pizza</h5>
-                    <p class="card-text">Wordpress powered website built for Margherita's Pizza in Baltimore, MD. I built this while working at Ma and Pa Web Creations as a Web Development Intern.</p>
-                    <a href="https://www.bestmargheritapizza.com/" target="_blank" class="btn btn-primary">Link</a>
+                  <h5 class="card-title">Margherita's Pizza</h5>
+                  <p class="card-text">WordPress site for Margherita's Pizza built during my internship at Ma and Pa Web Creations.</p>
+                  <a href="https://www.bestmargheritapizza.com/" target="_blank" class="btn btn-primary">Link</a>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/terracare.png" class="card-img-top" alt="Chatbot Therapist Screenshot">
-            <div class="card-body">
-              <h5 class="card-title">TerraCare</h5>
-              <p class="card-text">A Flask + Gemini powered chatbot that simulates therapeutic conversations with AI. Built in 36 hours at BitCamp!</p>
-              <a href="https://github.com/ayank674/therapistAI" target="_blank" class="btn btn-primary">GitHub Repo</a>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/terracare.png" class="card-img-top" alt="TerraCare Screenshot">
+                <div class="card-body">
+                  <h5 class="card-title">TerraCare</h5>
+                  <p class="card-text">A Flask + Gemini chatbot that simulates therapeutic AI conversations. Built at BitCamp in 36 hours.</p>
+                  <a href="https://github.com/ayank674/therapistAI" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/lunar.png" class="card-img-top" alt="Lunar Phase App Screenshot">
+                <div class="card-body">
+                  <h5 class="card-title">Lunar Phase App</h5>
+                  <p class="card-text">Shows the lunar phase based on date and time. Built with Node.js, Express, and MongoDB.</p>
+                  <a href="https://lunarphaseapp.onrender.com/" target="_blank" class="btn btn-primary">Link</a>
+                  <a href="https://github.com/echavis11/lunarPhaseApp" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="images/lunar.png" class="card-img-top" alt="Lunar Phase App Screenshot">
-                <div class="card-body">
-                    <h5 class="card-title">Lunar Phase App</h5>
-                    <p class="card-text">A website that provides the lunar phase on any date and time inputted. Built using node.js, Express, and MongoDB.</p>
-                    <a href="https://lunarphaseapp.onrender.com/" target="_blank" class="btn btn-primary">Link</a>
-                    <a href="https://github.com/echavis11/lunarPhaseApp" target="_blank" class="btn btn-primary">GitHub Repo</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
+
+        <!-- Second slide -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card h-100">
                 <img src="images/luckys.png" class="card-img-top" alt="Lucky's Barbershop Screenshot">
                 <div class="card-body">
-                    <h5 class="card-title">Lucky's Barbershop</h5>
-                    <p class="card-text">Wordpress powered website built for Lucky's Barbershop in Midlothian, Texas. I built this while working at Ma and Pa Web Creations.</p>
-                    <a href="https://www.luckysbarbershops.co/" target="_blank" class="btn btn-primary">Link</a>
+                  <h5 class="card-title">Lucky's Barbershop</h5>
+                  <p class="card-text">WordPress site for Lucky’s Barbershop in Texas, also built during my internship at Ma and Pa Web Creations.</p>
+                  <a href="https://www.luckysbarbershops.co/" target="_blank" class="btn btn-primary">Link</a>
                 </div>
+              </div>
             </div>
+            <!-- Add more projects here or leave empty -->
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+          </div>
         </div>
+
       </div>
-    </section>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
     <footer class="bg-dark text-white text-center py-3">
       &copy; 2025 Ethan Chavis. All rights reserved.
