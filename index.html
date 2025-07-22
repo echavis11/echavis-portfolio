@@ -6,8 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+      .project-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        padding: 1rem 0;
+      }
+
+      .project-card {
+        flex: 0 0 calc(100% / 3 - 1rem);
+        min-width: 300px;
+        max-width: 300px;
+      }
+
+      .card {
+        height: 100%;
+      }
+
+      .carousel-nav {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .carousel-arrow {
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 0 1rem;
+        user-select: none;
+      }
+
+      @media (max-width: 768px) {
+        .project-card {
+          flex: 0 0 90%;
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -37,80 +73,64 @@
         <h2>Contact</h2>
         <p>Email: echavis@umd.edu</p>
         <p><a href="https://github.com/yourusername" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a></p>
-      </section>  
+    </section>  
 
     <!-- Projects Section -->
-    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+    <section class="container my-5" id="projects">
+      <h2 class="text-center mb-4">Projects</h2>
 
-        <!-- First slide -->
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="images/Pizza.PNG" class="card-img-top" alt="Pizza Screenshot">
-                <div class="card-body">
-                  <h5 class="card-title">Margherita's Pizza</h5>
-                  <p class="card-text">WordPress site for Margherita's Pizza built during my internship at Ma and Pa Web Creations.</p>
-                  <a href="https://www.bestmargheritapizza.com/" target="_blank" class="btn btn-primary">Link</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="images/terracare.png" class="card-img-top" alt="TerraCare Screenshot">
-                <div class="card-body">
-                  <h5 class="card-title">TerraCare</h5>
-                  <p class="card-text">A Flask + Gemini chatbot that simulates therapeutic AI conversations. Built at BitCamp in 36 hours.</p>
-                  <a href="https://github.com/ayank674/therapistAI" target="_blank" class="btn btn-primary">GitHub Repo</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="images/lunar.png" class="card-img-top" alt="Lunar Phase App Screenshot">
-                <div class="card-body">
-                  <h5 class="card-title">Lunar Phase App</h5>
-                  <p class="card-text">Shows the lunar phase based on date and time. Built with Node.js, Express, and MongoDB.</p>
-                  <a href="https://lunarphaseapp.onrender.com/" target="_blank" class="btn btn-primary">Link</a>
-                  <a href="https://github.com/echavis11/lunarPhaseApp" target="_blank" class="btn btn-primary">GitHub Repo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Second slide -->
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="images/luckys.png" class="card-img-top" alt="Lucky's Barbershop Screenshot">
-                <div class="card-body">
-                  <h5 class="card-title">Lucky's Barbershop</h5>
-                  <p class="card-text">WordPress site for Lucky’s Barbershop in Texas, also built during my internship at Ma and Pa Web Creations.</p>
-                  <a href="https://www.luckysbarbershops.co/" target="_blank" class="btn btn-primary">Link</a>
-                </div>
-              </div>
-            </div>
-            <!-- Add more projects here or leave empty -->
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-          </div>
-        </div>
-
+      <div class="carousel-nav">
+        <span class="carousel-arrow" onclick="scrollCarousel(-1)">&#8592;</span>
+        <span class="carousel-arrow" onclick="scrollCarousel(1)">&#8594;</span>
       </div>
 
-      <!-- Carousel controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+      <div class="project-carousel" id="projectCarousel">
+        <div class="project-card">
+          <div class="card">
+            <img src="images/Pizza.PNG" class="card-img-top" alt="Pizza Screenshot">
+            <div class="card-body">
+              <h5 class="card-title">Margherita's Pizza</h5>
+              <p class="card-text">WordPress powered website built for Margherita's Pizza in Baltimore, MD.</p>
+              <a href="https://www.bestmargheritapizza.com/" target="_blank" class="btn btn-primary">Link</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card">
+            <img src="images/terracare.png" class="card-img-top" alt="Chatbot Therapist Screenshot">
+            <div class="card-body">
+              <h5 class="card-title">TerraCare</h5>
+              <p class="card-text">Flask + Gemini powered chatbot simulating therapeutic conversations.</p>
+              <a href="https://github.com/ayank674/therapistAI" target="_blank" class="btn btn-primary">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card">
+            <img src="images/lunar.png" class="card-img-top" alt="Lunar Phase App Screenshot">
+            <div class="card-body">
+              <h5 class="card-title">Lunar Phase App</h5>
+              <p class="card-text">Find the lunar phase on any date/time. Built using Node.js, Express, and MongoDB.</p>
+              <a href="https://lunarphaseapp.onrender.com/" target="_blank" class="btn btn-primary">Link</a>
+              <a href="https://github.com/echavis11/lunarPhaseApp" target="_blank" class="btn btn-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card">
+            <img src="images/luckys.png" class="card-img-top" alt="Lucky's Barbershop Screenshot">
+            <div class="card-body">
+              <h5 class="card-title">Lucky's Barbershop</h5>
+              <p class="card-text">WordPress website for a Texas-based barbershop.</p>
+              <a href="https://www.luckysbarbershops.co/" target="_blank" class="btn btn-primary">Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="bg-dark text-white text-center py-3">
       &copy; 2025 Ethan Chavis. All rights reserved.
@@ -118,5 +138,14 @@
 
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Carousel Scroll Script -->
+    <script>
+      function scrollCarousel(direction) {
+        const container = document.getElementById('projectCarousel');
+        const scrollAmount = container.clientWidth;
+        container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
+    </script>
 </body>
 </html>
